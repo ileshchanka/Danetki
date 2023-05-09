@@ -14,27 +14,24 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            MyApplicationTheme {
+            DanetkiTheme {
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    GreetingView(Greeting().greet())
+                    HomeScreen()
                 }
             }
         }
     }
 }
 
-@Composable
-fun GreetingView(text: String) {
-    Text(text = text)
-}
 
-@Preview
+
+@Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {
-    MyApplicationTheme {
-        GreetingView("Hello, Android!")
+    DanetkiTheme {
+        HomeScreen()
     }
 }
